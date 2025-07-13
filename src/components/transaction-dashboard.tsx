@@ -13,21 +13,21 @@ export const TransactionDashboard = () => {
   });
 
   return (
-    <div className="min-h-screen bg-background p-6">
-      <div className="max-w-7xl mx-auto space-y-6">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-          <div>
-            <h1 className="text-3xl font-bold text-foreground">
+    <div className="min-h-screen bg-background p-2 sm:p-4 lg:p-6">
+      <div className="max-w-7xl mx-auto space-y-3 sm:space-y-4 lg:space-y-6">
+        <div className="flex flex-col gap-2 sm:gap-4">
+          <div className="text-center sm:text-left">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground leading-tight">
               Dashboard de Transacciones
             </h1>
-            <p className="text-muted-foreground">
+            <p className="text-sm sm:text-base text-muted-foreground mt-1">
               Monitorea y administra tus transacciones
             </p>
           </div>
         </div>
 
-        <Card>
-          <CardContent>
+        <Card className="shadow-sm">
+          <CardContent className="p-2 sm:p-4 lg:p-6">
             <TransactionsTable
               transactionsData={transactionsData}
               isLoading={isLoading}
